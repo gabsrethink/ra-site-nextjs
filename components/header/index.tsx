@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React from "react";
 
 export default function Nav() {
@@ -7,9 +6,6 @@ export default function Nav() {
       <p className="logo">
         <strong>Rethink Academy</strong>
       </p>
-      <div>
-        <a href="/"> Home </a>
-      </div>
     </div>
   );
 }
