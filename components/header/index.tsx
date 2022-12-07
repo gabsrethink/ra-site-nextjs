@@ -1,11 +1,24 @@
 import React from "react";
+import styles from "./header.module.css";
 
-export default function Nav() {
+export default function Nav({ props: data }: any) {
+  console.log(data);
   return (
-    <div className="nav">
-      <p className="logo">
-        <strong>Rethink Academy</strong>
-      </p>
-    </div>
+    <>
+      {data.map((val: any, i: any) => {
+        return (
+          <div className={styles.header_container} key={i}>
+            <div>
+              <img src={val.logo.url} alt={val.logo.name} />
+            </div>
+            <div className={styles.header_buttons}>
+              {val.links.map((link: any, i: any) => {
+                return <p key={i}>{link.name}</p>;
+              })}
+            </div>
+          </div>
+        );
+      })}
+    </>
   );
 }
