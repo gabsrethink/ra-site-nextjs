@@ -1,6 +1,6 @@
 .section_container {
   padding-top: 10vh;
-
+  width: fit-content;
   background-color: var(--color-detail);
 }
 
@@ -124,10 +124,10 @@
 @media screen and (max-width: 1100px) {
   .post_container {
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
   }
   .post_container_left_text {
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
   }
 }
