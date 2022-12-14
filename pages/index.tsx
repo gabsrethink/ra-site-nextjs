@@ -1,5 +1,6 @@
 import Footer from "../components/footer";
 import Nav from "../components/header";
+import ScrollArrow from "../components/scrollTopButton/indext";
 import TitleContent from "../components/titleContent";
 import TwoColumnsSection from "../components/twoColumnsSection";
 import { instance } from "../utils/requester";
@@ -12,6 +13,7 @@ export default function Home({ data }: any) {
       <TitleContent props={data} />
       <TwoColumnsSection props={data} />
       <Footer props={data} />
+      <ScrollArrow />
     </div>
   );
 }

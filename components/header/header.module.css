@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   background-color: var(--color-dark);
-  padding: 4.5% 4.5% 0 4.5%;
+  padding: 4.7% 4.5% 0 4.5%;
 }
 
 .header_buttons {
@@ -12,16 +12,17 @@
   gap: 25px;
 }
 
-.header_buttons p {
+.header_buttons a {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   color: var(--color-light);
   transition: transform 0.3s ease;
   cursor: pointer;
+  text-decoration: none;
 }
 
-.header_buttons p:hover {
+.header_buttons a:hover {
   transform: translateY(-3px);
   color: var(--color-detail);
 }

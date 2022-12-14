@@ -13,7 +13,11 @@ export default function Nav({ props: data }: any) {
             </div>
             <div className={styles.header_buttons}>
               {val.links.map((link: any, i: any) => {
-                return <p key={i}>{link.name}</p>;
+                return (
+                  <a key={i} href={`#${link.name}`}>
+                    {link.name}
+                  </a>
+                );
               })}
             </div>
           </div>
