@@ -15,6 +15,7 @@ html {
   --color-border: rgba(0, 0, 0, 0.4);
   --color-button-opacity: #ededed60;
   --color-button-opacity-dark: #101010;
+  --color-secondary-hover: #3b3b3b;
 }
 
 * {
@@ -22,3 +23,31 @@ html {
   margin: 0;
   padding: 0;
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--color-light) !important;
+}
+
+/* .swiper-button-next,
+.swiper-button-prev {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+} */
+
+/* .carousel-caption {
+  position: absolute;
+  top: 0;
+  text-align: left;
+  left: inherit;
+  right: inherit;
+  
+  color: #000;
+  bottom: -95px;
+} */

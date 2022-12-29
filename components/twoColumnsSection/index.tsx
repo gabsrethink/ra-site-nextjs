@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./twoColumnsSection.module.css";
 
 export default function TwoColumnsSection({ props: data }: any) {
-  console.log(data);
   return (
     <>
       {data.map((val: any, i: any) => {

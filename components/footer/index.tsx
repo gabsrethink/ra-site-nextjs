@@ -3,7 +3,6 @@ import styles from "./footer.module.css";
 import { GitHub, LinkedIn, Instagram, YouTube } from "@mui/icons-material";
 
 export default function Footer({ props: data }: any) {
-  console.log(data);
   return (
     <>
       {data.map((val: any, i: any) => {

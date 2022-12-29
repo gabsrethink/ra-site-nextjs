@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./header.module.css";
 
 export default function Nav({ props: data }: any) {
-  console.log(data);
   return (
     <>
       {data.map((val: any, i: any) => {
