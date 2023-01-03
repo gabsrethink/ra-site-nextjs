@@ -33,7 +33,7 @@ export default function Slider({ props: data }: any) {
                       <Carousel variant="dark" fade>
                         {post.images.map((img: any, i: any) => {
                           return (
-                            <Carousel.Item interval={3000}>
+                            <Carousel.Item interval={3000} key={i}>
                               <img src={img.url} alt={img.name} />
                             </Carousel.Item>
                           );
