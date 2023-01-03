@@ -10,6 +10,7 @@ const ButtonWithIcon = ({ type, url }: ButtonWithIconProps) => {
   return (
     <a
       target="_blank"
+      rel="noreferrer"
       className={type === "green" ? style.button_green : style.button}
       href={url}
     >

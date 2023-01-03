@@ -14,6 +14,7 @@ export default function Slider({ props: data }: any) {
               return (
                 <>
                   <div
+                    key={i}
                     className={
                       post.isDarkTheme === true
                         ? styles.text_and_image_dark
