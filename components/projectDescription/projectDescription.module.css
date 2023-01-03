@@ -2,11 +2,11 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 10vh;
+  gap: 8vw;
   padding-top: 12vh;
   padding-bottom: 5vh;
-  padding-left: 16vw;
-  padding-right: 16vw;
+  padding-left: 14vw;
+  padding-right: 14vw;
   background-color: var(--color-dark);
   color: var(--color-light);
 }

@@ -23,6 +23,7 @@ export default function ProjectDescription({ props: data }: any) {
                 src="https://res.cloudinary.com/dyszk230x/image/upload/v1671725793/Mask_group_1_3_d22bb174c0.png?updated_at=2022-12-22T16:16:34.830Z"
                 alt=""
               />
+              {/* <img src={val.projectLogo.url} alt="" /> */}
             </div>
             <div className={styles.text_style}>
               <h1>{val.projectTitle}</h1>

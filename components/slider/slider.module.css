@@ -57,11 +57,10 @@
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-  gap: 10%;
+  justify-content: center;
+  gap: 5%;
   padding-top: 4vh;
-  padding-bottom: 5vh;
-  padding-left: 14vw;
-  padding-right: 14vw;
+  padding-bottom: 7vh;
   background-color: var(--color-light);
 }
 
