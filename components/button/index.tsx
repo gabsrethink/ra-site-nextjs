@@ -2,18 +2,19 @@ import style from "./button.module.css";
 import { GitHub } from "@mui/icons-material";
 
 type ButtonWithIconProps = {
-  //type: "black" | "green";
-  onClick?: () => void;
+  url?: any;
+  type?: "black" | "green";
 };
 
-const ButtonWithIcon = ({
-  // type,
-  onClick,
-}: ButtonWithIconProps) => {
+const ButtonWithIcon = ({ type, url }: ButtonWithIconProps) => {
   return (
-    <button onClick={onClick} className={style.button}>
+    <a
+      target="_blank"
+      className={type === "green" ? style.button_green : style.button}
+      href={url}
+    >
       <GitHub /> Acesse o Github do projeto
-    </button>
+    </a>
   );
 };
 

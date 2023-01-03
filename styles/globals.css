@@ -16,6 +16,7 @@ html {
   --color-button-opacity: #ededed60;
   --color-button-opacity-dark: #101010;
   --color-secondary-hover: #3b3b3b;
+  --color-hover: #9fbb2e;
 }
 
 * {

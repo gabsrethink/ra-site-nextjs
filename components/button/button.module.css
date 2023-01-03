@@ -1,4 +1,5 @@
-.button {
+.button,
+.button_green {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,6 +15,7 @@
   border: 1px solid rgba(27, 27, 27, 0.3);
   cursor: pointer;
   color: var(--color-light);
+  text-decoration: none;
 }
 
 .button svg {
@@ -22,4 +24,16 @@
 
 .button:hover {
   background-color: var(--color-secondary-hover);
+  color: var(--color-light);
+}
+
+.button_green {
+  background-color: var(--color-detail);
+  color: var(--color-dark);
+  font-weight: 500;
+}
+
+.button_green:hover {
+  background-color: var(--color-hover);
+  color: var(--color-secondary-hover);
 }
