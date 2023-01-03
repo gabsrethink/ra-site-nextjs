@@ -1,6 +1,7 @@
 import Footer from "../components/footer";
 import Nav from "../components/header";
 import ProjectDescription from "../components/projectDescription";
+import ScrollArrow from "../components/scrollTopButton/indext";
 import Slider from "../components/slider";
 import { instance } from "../utils/requester";
 
@@ -11,6 +12,7 @@ export default function Projects({ data }: any) {
       <ProjectDescription props={data} />
       <Slider props={data} />
       <Footer props={data} />
+      <ScrollArrow />
     </div>
   );
 }
