@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./twoColumnsSection.module.css";
+import { motion as m } from "framer-motion";
 
 export default function TwoColumnsSection({ props: data }: any) {
   return (
@@ -7,10 +8,16 @@ export default function TwoColumnsSection({ props: data }: any) {
       {data.map((val: any, i: any) => {
         return (
           <div key={i} className={styles.section_container}>
-            <div id="Sobre" className={styles.post_header}>
+            <m.div
+              id="Sobre"
+              className={styles.post_header}
+              initial={{ x: "-100%" }}
+              animate={{ x: "0%" }}
+              transition={{ duration: 2, ease: "easeOut" }}
+            >
               <h1>{val.trailTitle}</h1>
               <p>{val.trailDescription}</p>
-            </div>
+            </m.div>
             {val.text_and_image.map((post: any, i: any) => {
               return (
                 <div key={i}>
