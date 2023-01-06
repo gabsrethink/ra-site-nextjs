@@ -22,6 +22,8 @@ export default function Nav({ props: data }: any) {
               <Link href={"/"}>Home</Link>
               <a href={"/#Sobre"}>Sobre</a>
               <Link href={"/projects"}>Projetos</Link>
+              <Link href={"/events"}>Eventos</Link>
+              {/* <Link href={"/teams"}>Equipe</Link> */}
             </div>
           </div>
         );
