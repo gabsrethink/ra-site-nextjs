@@ -1,9 +1,14 @@
+import { motion as m } from "framer-motion";
 import React from "react";
 import styles from "./projectDescription.module.css";
 
 export default function ProjectDescription({ props: data }: any) {
   return (
-    <>
+    <m.div
+      initial={{ y: "-100%" }}
+      animate={{ y: "0%" }}
+      transition={{ duration: 0.75, ease: "easeOut" }}
+    >
       {data.map((val: any, i: any) => {
         let lastWords = val.projectDescription.slice(-72);
         return (
@@ -26,16 +31,26 @@ export default function ProjectDescription({ props: data }: any) {
               {/* <img src={val.projectLogo.url} alt="" /> */}
             </div>
             <div className={styles.text_style}>
-              <h1>{val.projectTitle}</h1>
-              <p>
+              <m.h1
+                initial={{ x: "-50%" }}
+                animate={{ x: "0%" }}
+                transition={{ duration: 0.95, ease: "easeOut" }}
+              >
+                {val.projectTitle}
+              </m.h1>
+              <m.p
+                initial={{ x: "50%" }}
+                animate={{ x: "0%" }}
+                transition={{ duration: 0.95, ease: "easeOut" }}
+              >
                 {val.projectDescription.replace(`${lastWords}`, "")}
                 <span>{lastWords}</span>
-              </p>
+              </m.p>
             </div>
           </div>
         );
       })}
       <div className={styles.skew_c} />
-    </>
+    </m.div>
   );
 }
