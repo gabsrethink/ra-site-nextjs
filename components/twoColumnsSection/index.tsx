@@ -11,9 +11,9 @@ export default function TwoColumnsSection({ props: data }: any) {
             <m.div
               id="Sobre"
               className={styles.post_header}
-              initial={{ x: "-100%" }}
-              animate={{ x: "0%" }}
-              transition={{ duration: 2, ease: "easeOut" }}
+              initial={{ x: "-100%", opacity: 0 }}
+              animate={{ x: "0%", opacity: 1 }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
             >
               <h1>{val.trailTitle}</h1>
               <p>{val.trailDescription}</p>

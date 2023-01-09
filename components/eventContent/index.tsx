@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./eventContent.module.css";
+import { motion as m } from "framer-motion";
 
 export default function EventContent({ props: data }: any) {
   return (
@@ -8,12 +9,28 @@ export default function EventContent({ props: data }: any) {
         let lastWords = val.eventParagraph.slice(-20);
         return (
           <div className={styles.text_container} key={i}>
-            <h1>{val.eventTitle}</h1>
-            <p>{val.eventDescription}</p>
-            <p>
+            <m.h1
+              initial={{ y: "-100%", opacity: 0 }}
+              animate={{ y: "0%", opacity: 1 }}
+              transition={{ duration: 0.75, ease: "easeOut" }}
+            >
+              {val.eventTitle}
+            </m.h1>
+            <m.p
+              initial={{ x: "-100%", opacity: 0 }}
+              animate={{ x: "0%", opacity: 1 }}
+              transition={{ duration: 0.75, ease: "easeOut" }}
+            >
+              {val.eventDescription}
+            </m.p>
+            <m.p
+              initial={{ x: "-100%", opacity: 0 }}
+              animate={{ x: "0%", opacity: 1 }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
+            >
               {val.eventParagraph.replace(`${lastWords}`, "")}
               <span>{lastWords}</span>
-            </p>
+            </m.p>
           </div>
         );
       })}
