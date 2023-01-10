@@ -10,7 +10,6 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <>
       <Head>
-        <title>Rethink Academy</title>
         <Header />
       </Head>
       {children}
