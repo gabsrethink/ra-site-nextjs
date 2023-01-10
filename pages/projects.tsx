@@ -1,21 +1,19 @@
-import Footer from "../components/footer";
-import Nav from "../components/header";
+import Layout from "../components/layout/layout";
 import ProjectDescription from "../components/projectDescription";
 import ScrollArrow from "../components/scrollTopButton/indext";
 import Slider from "../components/slider";
 import { instance } from "../utils/requester";
+import { NextPageWithLayout } from "./_app";
 
-export default function Projects({ data }: any) {
+const Projects: NextPageWithLayout = ({ data }: any) => {
   return (
     <div>
-      <Nav props={data} />
       <ProjectDescription props={data} />
       <Slider props={data} />
-      <Footer props={data} />
       <ScrollArrow />
     </div>
   );
-}
+};
 
 export async function getStaticProps() {
   try {
@@ -33,3 +31,8 @@ export async function getStaticProps() {
     };
   }
 }
+export default Projects;
+
+Projects.getLayout = function getLayout(page: React.ReactElement) {
+  return <Layout>{page}</Layout>;
+};

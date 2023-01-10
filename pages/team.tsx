@@ -1,19 +1,17 @@
-import Footer from "../components/footer";
-import Nav from "../components/header";
+import Layout from "../components/layout/layout";
 import ScrollArrow from "../components/scrollTopButton/indext";
 import TeamContent from "../components/teamContent";
 import { instance } from "../utils/requester";
+import { NextPageWithLayout } from "./_app";
 
-export default function Home({ data }: any) {
+const Team: NextPageWithLayout = ({ data }: any) => {
   return (
     <div>
-      <Nav props={data} />
       <TeamContent props={data} />
       <ScrollArrow />
-      <Footer props={data} />
     </div>
   );
-}
+};
 
 export async function getStaticProps() {
   try {
@@ -31,3 +29,9 @@ export async function getStaticProps() {
     };
   }
 }
+
+export default Team;
+
+Team.getLayout = function getLayout(page: React.ReactElement) {
+  return <Layout>{page}</Layout>;
+};

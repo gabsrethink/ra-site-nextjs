@@ -1,21 +1,19 @@
-import Footer from "../components/footer";
-import Nav from "../components/header";
+import Layout from "../components/layout/layout";
 import ScrollArrow from "../components/scrollTopButton/indext";
 import TitleContent from "../components/titleContent";
 import TwoColumnsSection from "../components/twoColumnsSection";
 import { instance } from "../utils/requester";
+import { NextPageWithLayout } from "./_app";
 
-export default function Home({ data }: any) {
+const Home: NextPageWithLayout = ({ data }: any) => {
   return (
     <div>
-      <Nav props={data} />
       <TitleContent props={data} />
       <TwoColumnsSection props={data} />
       <ScrollArrow />
-      <Footer props={data} />
     </div>
   );
-}
+};
 
 export async function getStaticProps() {
   try {
@@ -33,3 +31,9 @@ export async function getStaticProps() {
     };
   }
 }
+
+export default Home;
+
+Home.getLayout = function getLayout(page: React.ReactElement) {
+  return <Layout>{page}</Layout>;
+};
