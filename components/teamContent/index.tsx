@@ -46,6 +46,14 @@ export default function TeamContent({ props: data }: any) {
                 <span>{lastWords}</span>
               </m.p>
             </m.div>
+            <m.p
+              className={styles.paragraph}
+              initial={{ y: "-100%", opacity: 0 }}
+              animate={{ y: "0%", opacity: 1 }}
+              transition={{ duration: 0.75, ease: "easeOut" }}
+            >
+              Equipe:
+            </m.p>
             <m.div
               className={styles.card_container}
               variants={container}
@@ -53,32 +61,79 @@ export default function TeamContent({ props: data }: any) {
               animate="show"
             >
               {val.team.map((post: any, i: any) => {
-                return (
-                  <m.div
-                    key={i}
-                    variants={item}
-                    whileHover={{
-                      scale: 1.2,
-                      translateY: "-40px",
-                      transition: { duration: 0.1 },
-                    }}
-                    className={styles.card}
-                    style={{
-                      borderRadius: "1rem",
-                      boxShadow: "0px 10px 30px rgba(0,0,0,0.5)",
-                    }}
-                  >
-                    <m.h1 layout="position">{post.name}</m.h1>
-                    <m.img
-                      layout="position"
-                      src={post.image.url}
-                      alt={post.image.name}
-                    />
-                    <m.div className={styles.text}>
-                      <p>{post.role}</p>
+                if (!post.isIntern) {
+                  return (
+                    <m.div
+                      key={i}
+                      variants={item}
+                      whileHover={{
+                        scale: 1.2,
+                        translateY: "-40px",
+                        transition: { duration: 0.1 },
+                      }}
+                      className={styles.card}
+                      style={{
+                        borderRadius: "1rem",
+                        boxShadow: "0px 10px 30px rgba(0,0,0,0.5)",
+                      }}
+                    >
+                      <m.h1 layout="position">{post.name}</m.h1>
+                      <m.img
+                        layout="position"
+                        src={post.image.url}
+                        alt={post.image.name}
+                      />
+                      <m.div className={styles.text}>
+                        <p>{post.role}</p>
+                      </m.div>
                     </m.div>
-                  </m.div>
-                );
+                  );
+                }
+              })}
+            </m.div>
+            <m.p
+              className={styles.paragraph}
+              initial={{ y: "-100%", opacity: 0 }}
+              animate={{ y: "0%", opacity: 1 }}
+              transition={{ duration: 0.75, ease: "easeOut" }}
+            >
+              Alunos:
+            </m.p>
+            <m.div
+              className={styles.card_container}
+              variants={container}
+              initial="hidden"
+              animate="show"
+            >
+              {val.team.map((post: any, i: any) => {
+                if (post.isIntern) {
+                  return (
+                    <m.div
+                      key={i}
+                      variants={item}
+                      whileHover={{
+                        scale: 1.2,
+                        translateY: "-40px",
+                        transition: { duration: 0.1 },
+                      }}
+                      className={styles.card}
+                      style={{
+                        borderRadius: "1rem",
+                        boxShadow: "0px 10px 30px rgba(0,0,0,0.5)",
+                      }}
+                    >
+                      <m.h1 layout="position">{post.name}</m.h1>
+                      <m.img
+                        layout="position"
+                        src={post.image.url}
+                        alt={post.image.name}
+                      />
+                      <m.div className={styles.text}>
+                        <p>{post.role}</p>
+                      </m.div>
+                    </m.div>
+                  );
+                }
               })}
             </m.div>
           </>
