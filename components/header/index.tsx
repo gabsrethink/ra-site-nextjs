@@ -1,9 +1,8 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 import styles from "./header.module.css";
 
 export default function Nav() {
-  const [navActive, setNavActive] = useState(true);
   return (
     <div className={styles.header_container}>
       <div>
@@ -12,19 +11,8 @@ export default function Nav() {
           alt="Rethink Logo"
         />
       </div>
-      <div onClick={() => setNavActive(!navActive)} className={styles.nav_menu}>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <div
-        className={
-          navActive === false
-            ? styles.header_buttons
-            : styles.header_buttons_hidden
-        }
-        onClick={() => setNavActive(true)}
-      >
+
+      <div className={styles.header_buttons}>
         <Link href={"/"}>Home</Link>
         <a href={"/#Sobre"}>Sobre</a>
         <Link href={"/projects"}>Projetos</Link>
