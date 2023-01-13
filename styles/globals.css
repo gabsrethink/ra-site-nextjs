@@ -3,7 +3,6 @@
 
 html {
   scroll-behavior: smooth;
-  width: fit-content;
 }
 
 :root {
@@ -28,26 +27,3 @@ html {
 .swiper-button-prev {
   color: var(--color-light) !important;
 }
-
-/* .swiper-button-next,
-.swiper-button-prev {
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  display: none;
-} */
-
-/* .carousel-caption {
-  position: absolute;
-  top: 0;
-  text-align: left;
-  left: inherit;
-  right: inherit;
-  
-  color: #000;
-  bottom: -95px;
-} */

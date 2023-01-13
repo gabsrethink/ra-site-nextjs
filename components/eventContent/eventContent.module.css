@@ -28,3 +28,15 @@
   color: var(--color-detail);
   font-weight: 400;
 }
+
+@media screen and (max-width: 768px) {
+  .text_container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .text_container h1 {
+    font-size: 68px;
+    line-height: 90px;
+  }
+}

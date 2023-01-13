@@ -131,3 +131,9 @@
     gap: 30px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .section_container {
+    width: 100%;
+  }
+}
