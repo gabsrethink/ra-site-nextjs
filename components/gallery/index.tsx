@@ -5,11 +5,11 @@ import styles from "./gallery.module.css";
 
 export default function Gallery({ props: data }: any) {
   return (
-    <>
+    <div className={styles.container}>
       {data.map((val: any, i: any) => {
         return (
           <div className={styles.carousel_container} key={i}>
-            <Carousel variant="dark" fade>
+            <Carousel variant="light" fade>
               {val.promGallery.map((post: any, i: any) => {
                 return (
                   <Carousel.Item interval={3000} key={i}>
@@ -21,6 +21,6 @@ export default function Gallery({ props: data }: any) {
           </div>
         );
       })}
-    </>
+    </div>
   );
 }
