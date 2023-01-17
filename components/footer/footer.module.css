@@ -7,6 +7,10 @@
   gap: 50px;
 }
 
+.footer_container img {
+  width: 143px;
+}
+
 .footer_info p {
   color: var(--color-light);
   font-weight: 300;

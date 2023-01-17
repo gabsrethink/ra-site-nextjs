@@ -9,22 +9,22 @@
   flex-direction: column;
   gap: 20px;
   padding-bottom: 4vh;
-  padding-left: 20vw;
-  padding-right: 30vw;
+  padding-left: 16vw;
+  padding-right: 16vw;
   color: var(--color-dark);
 }
 
 .post_header h1 {
   font-style: normal;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 56px;
   line-height: 43px;
 }
 
 .post_header p {
   font-style: normal;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 28px;
 }
 

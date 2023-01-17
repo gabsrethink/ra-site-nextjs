@@ -23,7 +23,28 @@ html {
   padding: 0;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  color: var(--color-light) !important;
+.carousel-control-prev {
+  left: -80px !important;
+}
+
+.carousel-control-next {
+  right: -80px !important;
+}
+
+.carousel-indicators {
+  transform: translateY(48px);
+}
+
+@media screen and (max-width: 1250px) {
+  .carousel-control-prev {
+    left: 0 !important;
+  }
+
+  .carousel-control-next {
+    right: 0 !important;
+  }
+
+  .carousel-indicators {
+    transform: 0;
+  }
 }

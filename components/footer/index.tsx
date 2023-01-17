@@ -7,7 +7,7 @@ export default function Footer() {
     <div className={styles.footer_container}>
       <div>
         <img
-          src="https://res.cloudinary.com/dyszk230x/image/upload/v1670612570/0_Logo_1_4f6fda16e3.png"
+          src="https://res.cloudinary.com/dyszk230x/image/upload/v1673976585/ezgif.com-gif-maker_2_w7yinr.gif"
           alt="Rethink Logo"
         />
       </div>

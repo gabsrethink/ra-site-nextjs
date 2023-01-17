@@ -30,7 +30,10 @@ export default function Slider({ props: data }: any) {
                       />
                     </div>
                     <div className={styles.carousel_container}>
-                      <Carousel variant="dark" fade>
+                      <Carousel
+                        variant={post.isDarkTheme === true ? "light" : "dark"}
+                        fade
+                      >
                         {post.images.map((img: any, i: any) => {
                           return (
                             <Carousel.Item interval={3000} key={i}>
