@@ -2,9 +2,11 @@ import Link from "next/link";
 import React, { useState } from "react";
 import styles from "./header.module.css";
 import MenuIcon from "@mui/icons-material/Menu";
+import useAnalyticsEventTracker from "../../hooks/useAnalyticsEventTracker";
 
 export default function Nav() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
+  const gaEventTracker = useAnalyticsEventTracker("Header");
 
   return (
     <div className={styles.header_container}>
@@ -32,11 +34,19 @@ export default function Nav() {
           setIsNavExpanded(false);
         }}
       >
-        <Link href={"/"}>Home</Link>
+        <Link href={"/"} onClick={() => gaEventTracker("home")}>
+          Home
+        </Link>
         {/* <a href={"/#Sobre"}>Sobre</a> */}
-        <Link href={"/projects"}>Projetos</Link>
-        <Link href={"/events"}>Eventos</Link>
-        <Link href={"/team"}>Equipe</Link>
+        <Link href={"/projects"} onClick={() => gaEventTracker("projects")}>
+          Projetos
+        </Link>
+        <Link href={"/events"} onClick={() => gaEventTracker("events")}>
+          Eventos
+        </Link>
+        <Link href={"/team"} onClick={() => gaEventTracker("team")}>
+          Equipe
+        </Link>
       </div>
     </div>
   );
